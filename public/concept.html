@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 </head>
 <body>
-    <header>Fitness App</header>
+    <header>
+        <h1>Fitness App</h1>
+    </header>
     <main class="container">
         <!-- Create an account HTML -->
         <form>
-            <h1>Create an Account!</h1>
+            <h2>Create an Account!</h2>
             <div class="grid">
                 <label for="firstname">First name
                     <input type="text" id="firstname" placeholder="First Name" required>
@@ -34,6 +36,18 @@
             </div>
         </form>
         <!-- Create an account HTML END! -->
+
+        <!-- Login HTML -->
+        <form>
+            <h2>Login</h2>
+            <label for="email">Email
+                <input type="text" id="email" placeholder="Email" required>
+            </label>
+            <label for="password">Password
+                <input type="text" id="password" placeholder="Password" required>
+            </label>
+        </form>
+        <!-- Login END! -->
     </main>
 </body>
 </html>
