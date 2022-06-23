@@ -10,3 +10,11 @@ VALUES
     ('Montague', 'Summers', 'Montaguesss@gmail.com', 'pass1234', 1),
     ('Octavia', 'Butler', 'DocOctavia@gmail.com', 'pass1234', 1),
     ('Unica', 'Zurn', 'UniqueZurn@gmail.com', 'pass1234', 1);
+
+
+INSERT INTO workouts (activity, duration, date)
+VALUES
+    (Lifting, 30, '2022-12-21'),
+    (Running, 45, '2022-01-25'),
+    (Swimming, 25, '2022-12-31'),
+    (Walking, 120, '2022-11-24')
