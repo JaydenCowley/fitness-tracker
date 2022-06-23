@@ -1,3 +1,6 @@
-DROP DATABASE IF EXISTS fitness_db; 
-
-CREATE DATABASE fitness_db; 
+CREATE TABLE members (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    workouts BOOLEAN NOT NULL
+);
