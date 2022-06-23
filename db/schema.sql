@@ -6,3 +6,8 @@ CREATE TABLE users (
     password VARCHAR(30) NOT NULL,
     workouts BOOLEAN NOT NULL
 );
+
+CREATE TABLE workouts (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    activity VARCHAR(30)
+)

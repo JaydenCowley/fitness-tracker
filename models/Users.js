@@ -44,12 +44,17 @@ User.init(
     }, 
     {
         hooks: {
-            // password check should be inserted here
             async beforeCreate(newUserData) {
-                newUserData.password = await bcrypt.hash(newUserData.password, 10)
-            }
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+              },
+            },
+            sequelize,
+            timestamps: false,
+            freezeTableName: true,
+            underscored: true,
+            modelName: 'users' 
         }
-    }
     
 );
 

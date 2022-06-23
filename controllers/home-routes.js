@@ -3,8 +3,7 @@ const { Users, Workout } = require('../models');
 
 router.get('/', (req, res) => {
   res.render('home')
-});
-
+})
 // Login route
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage

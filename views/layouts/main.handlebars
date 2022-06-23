@@ -17,9 +17,13 @@
       </ul>
       <ul>
 
-        <li><a href="#">Logout</a></li>
-        <li><a href="#" role="button">View Workouts</a></li>
-        <li><a href="#" role="button">Add a Workout</a></li>
+        {{#if loggedIn}}
+        <li><a href="/">Logout</a></li>
+        <li><a href="/workoutHistory" role="button">View Workouts</a></li>
+        <li><a href="/addWorkouts" role="button">Add a Workout</a></li>
+        {{else}}
+        <li><a href="/login" role="button">Login</a></li>
+        {{/if}}
       </ul>
     </nav>
 
