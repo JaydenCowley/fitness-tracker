@@ -3,6 +3,9 @@ const { Users, Workout } = require('../models');
 
 router.get('/', (req, res) => {
   res.render('home')
+});
+router.get('/createUser', (req, res) => {
+  res.render('createUser')
 })
 // Login route
 router.get('/login', (req, res) => {
