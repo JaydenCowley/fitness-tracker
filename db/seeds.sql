@@ -14,7 +14,7 @@ VALUES
 
 INSERT INTO workouts (activity, duration, date)
 VALUES
-    (Lifting, 30, '2022-12-21'),
-    (Running, 45, '2022-01-25'),
-    (Swimming, 25, '2022-12-31'),
-    (Walking, 120, '2022-11-24')
+    ('Lifting', 30, '2022-12-21'),
+    ('Running', 45, '2022-01-25'),
+    ('Swimming', 25, '2022-12-31'),
+    ('Walking', 120, '2022-11-24')
