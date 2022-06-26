@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Users, Workout } = require('../models');
-
+// do we need a const sequelize = require('../config/connection'); 
 router.get('/', (req, res) => {
   res.render('home')
 })
