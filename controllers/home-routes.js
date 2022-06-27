@@ -17,6 +17,8 @@ router.get('/login', (req, res) => {
   // Otherwise, render the 'login' template
   res.render('login');
 });
-
+router.get('/workoutHistory', (req, res) => {
+  res.render('workoutHistory')
+})
 
 module.exports = router;
