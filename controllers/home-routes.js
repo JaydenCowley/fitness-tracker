@@ -20,5 +20,7 @@ router.get('/login', (req, res) => {
 router.get('/workoutHistory', (req, res) => {
   res.render('workoutHistory')
 })
-
+router.get('/addWorkouts', (req, res) => {
+  res.render('addWorkouts')
+})
 module.exports = router;

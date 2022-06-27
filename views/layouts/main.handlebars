@@ -9,7 +9,8 @@
       href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
     />
   </head>
-
+<body>
+  
   <header class="container">
     <nav>
       <ul>
@@ -17,7 +18,7 @@
       </ul>
       <ul>
 
-        {{#if loggedIn}}
+        {{#if session.loggedIn}}
         <li><a href="/">Logout</a></li>
         <li><a href="/workoutHistory" role="button">View Workouts</a></li>
         <li><a href="/addWorkouts" role="button">Add a Workout</a></li>
@@ -31,7 +32,9 @@
   </header>
   <main class="container">
     {{{body}}}
-    
   </main>
-
+{{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+{{/if}}
+</body>
 </html>
