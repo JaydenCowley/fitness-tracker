@@ -17,10 +17,10 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
-      password: req.body.password,
+      password: req.body.password
     });
 
     // Set up sessions with a 'loggedIn' variable set to `true`
