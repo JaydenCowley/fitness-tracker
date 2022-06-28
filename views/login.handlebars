@@ -1,4 +1,4 @@
-<form>
+<form id="login-form">
   <h2>Login</h2>
   <label for="email">Email
     <input type="text" id="email-login" placeholder="Email" required />
@@ -6,7 +6,36 @@
   <label for="password">Password
     <input type="text" id="password-login" placeholder="Password" required />
   </label>
-  <button class="login-form" type="submit">Submit</button>
+  <button  type="submit">Submit</button>
 </form>
 
-<script src="/public/js/login.js"></script>
+<form id="signup-form">
+  <h2>Create an Account!</h2>
+  <div class="grid">
+    <label for="firstname">First name
+      <input type="text" id="firstname" placeholder="First Name" required />
+    </label>
+    <label for="lastname">Last name
+      <input type="text" id="lastname" placeholder="Last Name" required />
+    </label>
+  </div>
+  <div>
+    <label for="email">Email
+      <input type="text" id="email-signup" placeholder="Email" required />
+    </label>
+    <label for="password">Password
+      <input type="text" id="password-signup" placeholder="Password" required />
+    </label>
+    <label for="confirm-password">Confirm Password
+      <input
+        type="text"
+        id="confirm-password"
+        placeholder="Confirm Password"
+        required
+      />
+    </label>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<script src="/js/login.js"></script>
