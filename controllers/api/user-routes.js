@@ -74,4 +74,13 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// create workouts
+
+//  get workouts 
+router.get('/api/user/workouts', (req, res) =>{
+  res.render('workouts', {
+    /// need to finish looking at 14.1.5
+  })
+})
+
 module.exports = router;
