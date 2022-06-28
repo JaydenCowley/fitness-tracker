@@ -1,0 +1,14 @@
+CREATE TABLE users (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE workouts (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    activity VARCHAR(30) NOT NULL,
+    duration INTEGER NOT NULL,
+    date DATE NOT NULL
+)
