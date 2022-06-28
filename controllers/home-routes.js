@@ -2,8 +2,10 @@ const router = require('express').Router();
 const { Users, Workout } = require('../models');
 
 router.get('/', (req, res) => {
-  res.render('home')
-});
+  res.render('home', {
+    loggedIn: req.session.loggedIn,
+})});
+
 router.get('/createUser', (req, res) => {
   res.render('createUser')
 })
@@ -18,9 +20,13 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 router.get('/workoutHistory', (req, res) => {
-  res.render('workoutHistory')
+  res.render('workoutHistory', {
+    loggedIn: req.session.loggedIn
+  })
 })
 router.get('/addWorkouts', (req, res) => {
-  res.render('addWorkouts')
+  res.render('addWorkouts', {
+    loggedIn: req.session.loggedIn
+  })
 })
 module.exports = router;
