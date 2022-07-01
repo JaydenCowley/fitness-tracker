@@ -10,5 +10,6 @@ CREATE TABLE workouts (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     activity VARCHAR(30) NOT NULL,
     duration INTEGER NOT NULL,
-    date DATE NOT NULL
-)
+    date DATE NOT NULL, 
+    userid INTEGER NOT NULL
+);

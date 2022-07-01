@@ -5,7 +5,7 @@ event.preventDefault();
     const duration = document.querySelector('input[name="duration"]').value; 
     const date = document.querySelector('input[name="date"]').value;  
 
-    const response = await fetch(`/api/user:id/workouts`, {
+    const response = await fetch(`/api/workouts/:id`, {
         method: 'POST', 
         body: JSON.stringify({
             activity,

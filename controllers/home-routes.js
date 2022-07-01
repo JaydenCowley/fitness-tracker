@@ -26,33 +26,7 @@ router.get('/addWorkouts', (req, res) => {
   res.render('addWorkouts')
 })
 
-// create workouts
-router.post('/api/workouts/:id', (req, res) => {
-  req.session.save(() => {
-    req.session.activity = dbWorkouts.activity;
-    req.session.duration = dbWorkouts.duration;
-    req.session.date = dbWorkouts.date;
-  })
-});
 
-//  get workouts 
-router.get('/api/workouts/:id', (req, res) => {
-
-  /// need to finish looking at 14.1.5
-
-  Workout.findAll({
-    attributes: [
-      'activity',
-      'duration',
-      'date'
-    ]
-  })
-    .then(dbWorkouts => res.json(dbWorkouts))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    })
-});
 
 
 module.exports = router;
