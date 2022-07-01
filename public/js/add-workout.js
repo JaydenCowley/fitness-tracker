@@ -5,7 +5,7 @@ event.preventDefault();
     const duration = document.querySelector('input[name="duration"]').value; 
     const date = document.querySelector('input[name="date"]').value;  
 
-    const response = await fetch(`/api/user/workouts`, {
+    const response = await fetch(`/api/user:id/workouts`, {
         method: 'POST', 
         body: JSON.stringify({
             activity,
@@ -13,7 +13,7 @@ event.preventDefault();
             date
         }), 
         headers: {
-            'Content-Type' : "aplication/json" // I don't understand what this is doing
+            'Content-Type' : "aplication/json" 
         }
     }); 
     if (response.ok) {

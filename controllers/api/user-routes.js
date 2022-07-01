@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Workout } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -75,12 +75,31 @@ router.post('/logout', (req, res) => {
 });
 
 // create workouts
+router.post('/api/workouts/user:id', (req, res) =>{
+  req.session.save(() =>{
+    req.session.activity = dbworkouts.activity; 
+    req.session.duration = dbworkouts.duration; 
+    req.session.date = dbworkouts.date; 
+  } )
+});
 
 //  get workouts 
-router.get('/api/user/workouts', (req, res) =>{
-  res.render('workouts', {
+router.get('/api/workouts/user:id', (req, res) =>{
+  
     /// need to finish looking at 14.1.5
-  })
-})
+
+    Workout.findAll({
+      attributes: [
+        'activity',
+        'duration',
+        'date'
+      ]
+    })
+      .then(dbworkouts => res.json(dbworkouts))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      })
+});
 
 module.exports = router;
