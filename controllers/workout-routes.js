@@ -2,25 +2,6 @@ const router = require('express').Router();
 const sequelize = require('../config/connection'); 
 const { Users, Workout } = require('../models');
 
-//const addWorkoutRoutes = (router) =>{
-
-    // create workouts
-    router.post('/workouts', (req, res) => {
-        console.log(req);
-        const dbWorkouts = Workout.create({
-            activity: req.body.activity,
-            duration: req.body.duration,
-            date: req.body.date
-        });
-        
-        // req.session.save(() => {
-        //     req.session.activity = dbWorkouts.activity;
-        //     req.session.duration = dbWorkouts.duration;
-        //     req.session.date = dbWorkouts.date;
-        //     req.session.userid = dbWorkouts.userid;
-        // })
-    });
-
     //  get workouts 
     router.get('/workouts', (req, res) => {
 
@@ -41,5 +22,22 @@ const { Users, Workout } = require('../models');
                 res.status(500).json(err);
             })
     });
-//};
+    // create workouts
+    router.post('/workouts', (req, res) => {
+       
+        const dbWorkouts = Workout.create({
+            activity: req.body.activity,
+            duration: req.body.duration,
+            date: req.body.date,
+            userid: req.session.userid
+        });
+
+        // req.session.save(() => {
+        //     req.session.activity = dbWorkouts.activity;
+        //     req.session.duration = dbWorkouts.duration;
+        //     req.session.date = dbWorkouts.date;
+        //     req.session.userid = dbWorkouts.userid;
+        // })
+    });
+
 module.exports = router; 

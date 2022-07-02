@@ -8,9 +8,9 @@ event.preventDefault();
     const response = await fetch(`/api/workouts`, {
         method: 'POST', 
         body: JSON.stringify({
-            activity,
-            duration,
-            date
+            activity: activity,
+            duration: duration,
+            date: date
         }), 
         headers: {
             'Content-Type' : "aplication/json" 

@@ -52,7 +52,7 @@ return  User.findOne({
         return res;
       }
      
-        req.session.user_id = dbUserData.id;
+        req.session.userid = dbUserData.id;
         req.session.email = dbUserData.email;
         req.session.loggedIn = true;
         req.session.save()

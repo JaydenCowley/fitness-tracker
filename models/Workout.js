@@ -23,7 +23,7 @@ Workout.init(
             type: DataTypes.STRING, 
             allowNull: false, 
         }, 
-        user_id: {
+        userid: {
             type: DataTypes.INTEGER, 
             references: {
                 model: 'users', 
