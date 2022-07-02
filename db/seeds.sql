@@ -1,15 +1,15 @@
 INSERT INTO users (first_name, last_name, email, password)
 VALUES
-    ('Ronald', 'Firbank', 'RonFirbank@gmail.com', 'pass1234'),
-    ('Virginia', 'Woolf', 'VirginiaW@gmail.com', 'pass1234'),
-    ('Piers', 'Gaveston', 'PiersGave@gmail.com', 'pass1234'),
-    ('Charles', 'LeRoi', 'CleRoi@gmail.com', 'pass1234'),
-    ('Katherine', 'Mansfield', 'KathyMan@gmail.com', 'pass1234'),
-    ('Dora', 'Carrington', 'DoraCarring@gmail.com', 'pass1234'),
-    ('Edward', 'Bellamy', 'EdwardBell@gmail.com', 'pass1234'),
-    ('Montague', 'Summers', 'Montaguesss@gmail.com', 'pass1234'),
-    ('Octavia', 'Butler', 'DocOctavia@gmail.com', 'pass1234'),
-    ('Unica', 'Zurn', 'UniqueZurn@gmail.com', 'pass1234');
+    ('Ronald', 'Firbank', 'RonFirbank@gmail.com', 'pass1234567'),
+    ('Virginia', 'Woolf', 'VirginiaW@gmail.com', 'pass1234567'),
+    ('Piers', 'Gaveston', 'PiersGave@gmail.com', 'pass1234567'),
+    ('Charles', 'LeRoi', 'CleRoi@gmail.com', 'pass1234567'),
+    ('Katherine', 'Mansfield', 'KathyMan@gmail.com', 'pass1234567'),
+    ('Dora', 'Carrington', 'DoraCarring@gmail.com', 'pass1234567'),
+    ('Edward', 'Bellamy', 'EdwardBell@gmail.com', 'pass1234567'),
+    ('Montague', 'Summers', 'Montaguesss@gmail.com', 'pass1234567'),
+    ('Octavia', 'Butler', 'DocOctavia@gmail.com', 'pass1234567'),
+    ('Unica', 'Zurn', 'UniqueZurn@gmail.com', 'pass1234567');
 
 
 INSERT INTO workouts (activity, duration, date, userid)

@@ -1,9 +1,9 @@
 async function newFormHandler(event) {
 event.preventDefault(); 
 
-    const activity = document.querySelector('input[name="activity"]').value;
-    const duration = document.querySelector('input[name="duration"]').value; 
-    const date = document.querySelector('input[name="date"]').value;  
+    const activity = document.getElementById('activity').value;
+    const duration = document.getElementById('duration').value; 
+    const date = document.getElementById('date').value;  
 
     const response = await fetch(`/api/workouts`, {
         method: 'POST', 
