@@ -5,8 +5,9 @@ const { Users, Workout } = require('../models');
 //const addWorkoutRoutes = (router) =>{
 
     // create workouts
-    router.post('/api/workouts/:id', (req, res) => {
-        const dbWorkouts = Workouts.create({
+    router.post('/workouts', (req, res) => {
+        console.log(req);
+        const dbWorkouts = Workout.create({
             activity: req.body.activity,
             duration: req.body.duration,
             date: req.body.date
@@ -21,9 +22,8 @@ const { Users, Workout } = require('../models');
     });
 
     //  get workouts 
-    router.get('/api/workouts/:id', (req, res) => {
+    router.get('/workouts', (req, res) => {
 
-        /// need to finish looking at 14.1.5
 
         Workout.findAll({
             where: {

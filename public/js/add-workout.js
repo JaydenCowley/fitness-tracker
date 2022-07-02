@@ -5,7 +5,7 @@ event.preventDefault();
     const duration = document.querySelector('input[name="duration"]').value; 
     const date = document.querySelector('input[name="date"]').value;  
 
-    const response = await fetch(`/api/workouts/:id`, {
+    const response = await fetch(`/api/workouts`, {
         method: 'POST', 
         body: JSON.stringify({
             activity,
@@ -23,4 +23,4 @@ event.preventDefault();
     }
 }
 
-document.querySelector('.new-workout-form').addEventListener('submit', newFormHandler); 
+document.getElementById('new-workout-form').addEventListener('submit', newFormHandler); 

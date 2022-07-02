@@ -9,7 +9,7 @@ CREATE TABLE users (
 CREATE TABLE workouts (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     activity VARCHAR(30) NOT NULL,
-    duration INTEGER NOT NULL,
-    date DATE NOT NULL, 
+    duration VARCHAR(30) NOT NULL,
+    date VARCHAR(30) NOT NULL, 
     userid INTEGER NOT NULL
 );
