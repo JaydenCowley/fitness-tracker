@@ -11,19 +11,19 @@ Workout.init(
             primaryKey: true, 
             autoIncrement: true, 
         }, 
-        description: {
+        activity: {
             type: DataTypes.STRING, 
             allowNull: false,
         }, 
-        date: {
-            type: DataTypes.DATEONLY, 
+        duration: {
+            type: DataTypes.STRING, 
+            allowNull: false, 
+        },
+        date_: {
+            type: DataTypes.STRING, 
             allowNull: false, 
         }, 
-        time: {
-            type: DataTypes.TIME, 
-            allowNull: false, 
-        }, 
-        user_id: {
+        userid: {
             type: DataTypes.INTEGER, 
             references: {
                 model: 'users', 

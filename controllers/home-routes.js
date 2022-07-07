@@ -1,5 +1,7 @@
 const router = require('express').Router();
+const { add } = require('lodash');
 const { Users, Workout } = require('../models');
+//const addWorkoutRoutes = require('./workout-routes'); 
 
 router.get('/', (req, res) => {
   res.render('home')
@@ -18,9 +20,14 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 router.get('/workoutHistory', (req, res) => {
-  res.render('workoutHistory')
+  
+  res.render('workoutHistory', {loggedIn: req.session.loggedIn});
 })
 router.get('/addWorkouts', (req, res) => {
   res.render('addWorkouts')
 })
+
+//addWorkoutRoutes(router); 
+
+
 module.exports = router;

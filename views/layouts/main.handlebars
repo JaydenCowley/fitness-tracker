@@ -19,7 +19,7 @@
       <ul>
 
         {{#if loggedIn}}
-        <li><a id="logout-link" href="/">Logout</a></li>
+        <li><a id="logout-link">Logout</a></li>
         <li><a href="/workoutHistory" role="button">View Workouts</a></li>
         <li><a href="/addWorkouts" role="button">Add a Workout</a></li>
         {{else}}
@@ -35,7 +35,8 @@
   </main>
 {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-{{/if}}
+{{else}}
 <script src="/js/login.js" ></script>
+{{/if}}
 </body>
 </html>

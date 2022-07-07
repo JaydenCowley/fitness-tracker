@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -30,37 +29,40 @@ router.post('/', async (req, res) => {
       res.status(200).json(dbUserData);
     });
   } catch (err) {
-    console.log(err);
+    
     res.status(500).json(err);
   }
 });
 
 // Login
-router.post('/login?', (req, res) => {
-  console.log('hitting login route')
-    User.findOne({
+router.post('/login', (req, res) => {
+return  User.findOne({
       where: {
         email: req.body.email,
       }
     }).then(dbUserData => {
       if (!dbUserData) {
         res.status(400).json({message: 'No user with that email address'});
-        return;
+        return res;
       }
       const validPassword = dbUserData.checkPassword(req.body.password);
       
       if (!validPassword) {
         res.status(400).json({message: 'Incorrect password!'});
-        return;
+        return res;
       }
-      req.session.save(() => {
-        req.session.user_id = dbUserData.id;
+     
+        req.session.userid = dbUserData.id;
         req.session.email = dbUserData.email;
         req.session.loggedIn = true;
-        res.json({ user: dbUserData, message: 'You are now logged in!'})
-      });
+        req.session.save()
+        res.header('Access-Control-Allow-Credentials', 'true');
+       return res.json({ user: dbUserData, message: 'You are now logged in!'})
+  
+    }).catch(err => {
+      
     });
-  });
+ });
 
 // Logout
 router.post('/logout', (req, res) => {
@@ -70,8 +72,10 @@ router.post('/logout', (req, res) => {
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(400).end();
   }
 });
+
+
 
 module.exports = router;
