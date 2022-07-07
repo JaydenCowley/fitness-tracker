@@ -12,7 +12,7 @@ VALUES
     ('Unica', 'Zurn', 'UniqueZurn@gmail.com', 'pass1234567');
 
 
-INSERT INTO workouts (activity, duration, date, userid)
+INSERT INTO workouts (activity, duration, date_, userid)
 VALUES
     ('Lifting', '30', '2022-12-21', 1),
     ('Running', '45', '2022-01-25', 2),

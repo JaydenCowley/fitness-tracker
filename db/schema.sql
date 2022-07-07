@@ -8,8 +8,11 @@ CREATE TABLE users (
 
 CREATE TABLE workouts (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    userid INTEGER NOT NULL,
     activity VARCHAR(30) NOT NULL,
     duration VARCHAR(30) NOT NULL,
-    date VARCHAR(30) NOT NULL, 
-    userid INTEGER NOT NULL
+    date_ VARCHAR(30) NOT NULL, 
+    createdAt datetime,
+    updatedAt datetime
+
 );

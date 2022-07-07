@@ -19,7 +19,7 @@ Workout.init(
             type: DataTypes.STRING, 
             allowNull: false, 
         },
-        date: {
+        date_: {
             type: DataTypes.STRING, 
             allowNull: false, 
         }, 
