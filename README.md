@@ -13,7 +13,7 @@
   5. [Test](#tests)
 
   ## Installation
-  *To get to our project go to our heroku live deployed page (___)!
+  *To get to our project go to our heroku live deployed page https://enigmatic-tor-51827.herokuapp.com/!
 
   ## Usage
   *For anyone who wants to become healthier or just feel better!
